@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the source code to the container
-COPY . .
+COPY ./src/dist /usr/src/app/
 
 # Build the Astro project
 RUN npm run build
